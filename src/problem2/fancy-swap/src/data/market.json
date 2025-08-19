@@ -1,0 +1,129 @@
+{
+    "coinList": [
+        {
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "logo": "/tokens/BTC.svg"
+        },
+        {
+            "name": "Ethereum",
+            "symbol": "ETH",
+            "logo": "/tokens/ETH.svg"
+        },
+        {
+            "name": "Tether USD",
+            "symbol": "USDT",
+            "logo": "/tokens/USDT.svg"
+        },
+        {
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "logo": "/tokens/USDC.svg"
+        },
+        {
+            "name": "Binance Coin",
+            "symbol": "BNB",
+            "logo": "/tokens/BNB.svg"
+        },
+        {
+            "name": "Solana",
+            "symbol": "SOL",
+            "logo": "/tokens/SOL.svg"
+        },
+        {
+            "name": "XRP",
+            "symbol": "XRP",
+            "logo": "/tokens/XRP.svg"
+        },
+        {
+            "name": "Dogecoin",
+            "symbol": "DOGE",
+            "logo": "/tokens/DOGE.svg"
+        },
+        {
+            "name": "Cardano",
+            "symbol": "ADA",
+            "logo": "/tokens/ADA.svg"
+        },
+        {
+            "name": "Avalanche",
+            "symbol": "AVAX",
+            "logo": "/tokens/AVAX.svg"
+        },
+        {
+            "name": "Chainlink",
+            "symbol": "LINK",
+            "logo": "/tokens/LINK.svg"
+        },
+        {
+            "name": "Polygon",
+            "symbol": "MATIC",
+            "logo": "/tokens/MATIC.svg"
+        },
+        {
+            "name": "Litecoin",
+            "symbol": "LTC",
+            "logo": "/tokens/LTC.svg"
+        },
+        {
+            "name": "Shiba Inu",
+            "symbol": "SHIB",
+            "logo": "/tokens/SHIB.svg"
+        },
+        {
+            "name": "Uniswap",
+            "symbol": "UNI",
+            "logo": "/tokens/UNI.svg"
+        },
+        {
+            "name": "Wrapped Bitcoin",
+            "symbol": "WBTC",
+            "logo": "/tokens/WBTC.svg"
+        },
+        {
+            "name": "Dai",
+            "symbol": "DAI",
+            "logo": "/tokens/DAI.svg"
+        },
+        {
+            "name": "Cosmos",
+            "symbol": "ATOM",
+            "logo": "/tokens/ATOM.svg"
+        },
+        {
+            "name": "Polkadot",
+            "symbol": "DOT",
+            "logo": "/tokens/DOT.svg"
+        },
+        {
+            "name": "Arbitrum",
+            "symbol": "ARB",
+            "logo": "/tokens/ARB.svg"
+        },
+        {
+            "name": "Optimism",
+            "symbol": "OP",
+            "logo": "/tokens/OP.svg"
+        },
+        {
+            "name": "Near Protocol",
+            "symbol": "NEAR",
+            "logo": "/tokens/NEAR.svg"
+        },
+        {
+            "name": "ApeCoin",
+            "symbol": "APE",
+            "logo": "/tokens/APE.svg"
+        },
+        {
+            "name": "Filecoin",
+            "symbol": "FIL",
+            "logo": "/tokens/FIL.svg"
+        },
+        {
+            "name": "Fantom",
+            "symbol": "FTM",
+            "logo": "/tokens/FTM.svg"
+        }
+    ]
+}
