@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import { BoxProps } from './BoxProps'; // Giả sử BoxProps được định nghĩa ở đâu đó
+import { BoxProps } from './BoxProps'; // Assume BoxProps is defined somewhere
 
-// Định nghĩa các kiểu rõ ràng
+// Define clear types
 type Blockchain = 'Osmosis' | 'Ethereum' | 'Arbitrum' | 'Zilliqa' | 'Neo' | string;
 
 interface WalletBalance {
@@ -19,14 +19,14 @@ interface Prices {
   [currency: string]: number;
 }
 
-// Giả sử các hook đã được định nghĩa với kiểu
+// Assume hooks are already defined with types
 interface WalletPageProps extends BoxProps {}
 
 const WalletPage: React.FC<WalletPageProps> = ({ ...rest }) => {
-  const balances = useWalletBalances(); // Giả sử trả về WalletBalance[]
-  const prices = usePrices(); // Giả sử trả về Prices
+  const balances = useWalletBalances(); // Assume returns WalletBalance[]
+  const prices = usePrices(); // Assume returns Prices
 
-  // Hàm getPriority với kiểu rõ ràng
+  // getPriority function with clear types
   const getPriority = (blockchain: Blockchain): number => {
     switch (blockchain) {
       case 'Osmosis':
@@ -43,7 +43,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ ...rest }) => {
     }
   };
 
-  // Tính toán sortedBalances với logic rõ ràng và tối ưu
+  // Calculate sortedBalances with clear and optimized logic
   const sortedBalances = useMemo(() => {
     return balances
       .map((balance: WalletBalance) => ({
@@ -54,27 +54,27 @@ const WalletPage: React.FC<WalletPageProps> = ({ ...rest }) => {
       .sort((lhs: FormattedWalletBalance, rhs: FormattedWalletBalance) => {
         if (lhs.priority > rhs.priority) return -1;
         if (lhs.priority < rhs.priority) return 1;
-        return lhs.currency.localeCompare(rhs.currency); // Tiêu chí phụ để sắp xếp ổn định
+        return lhs.currency.localeCompare(rhs.currency); // Secondary criteria for stable sorting
       });
   }, [balances]);
 
-  // Xử lý trạng thái loading và rỗng
+  // Handle loading and empty states
   if (!balances || balances.length === 0) {
     return <div {...rest}>No balances available</div>;
   }
 
-  // Tạo rows trực tiếp, loại bỏ formattedBalances trung gian
+  // Create rows directly, eliminating intermediate formattedBalances
   const rows = sortedBalances.map((balance: FormattedWalletBalance) => {
     const usdValue = prices[balance.currency]
       ? prices[balance.currency] * balance.amount
       : 0;
     return (
       <WalletRow
-        key={balance.currency} // Sử dụng currency làm key duy nhất
-        className="wallet-row" // Giả sử sử dụng CSS modules hoặc class cố định
+        key={balance.currency} // Use currency as unique key
+        className="wallet-row" // Assume using CSS modules or fixed class
         amount={balance.amount}
         usdValue={usdValue}
-        formattedAmount={balance.amount.toFixed(2)} // Định dạng với 2 chữ số thập phân
+        formattedAmount={balance.amount.toFixed(2)} // Format with 2 decimal places
       />
     );
   });
@@ -82,18 +82,18 @@ const WalletPage: React.FC<WalletPageProps> = ({ ...rest }) => {
   return <div {...rest}>{rows}</div>;
 };
 
-// Giả định các hook
+// Mock hooks
 const useWalletBalances = () => {
-  // Giả lập dữ liệu
+  // Mock data
   return [] as WalletBalance[];
 };
 
 const usePrices = () => {
-  // Giả lập dữ liệu
+  // Mock data
   return {} as Prices;
 };
 
-// Giả định WalletRow component
+// Mock WalletRow component
 const WalletRow: React.FC<{
   className: string;
   amount: number;
